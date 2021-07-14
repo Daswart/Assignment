@@ -35,9 +35,9 @@ else{
 <div id="container">
   <form name="form1" method="post" action= "<?php echo$_SERVER["PHP_SELF"]?>" >
   <img src="" alt="">
-  <label for="username"></label>Username<br>
+  <label for="username">Username</label><br>
   <input type="text" placeholder="Enter username here" id="username" name="username"><br>
-      <label for="password"></label>Password<br>
+      <label for="password">Password</label><br>
     <input type="password" placeholder="Enter password here" id="password" name="password"><br>
       <input type="submit" value="Inloggen">
   </form>
