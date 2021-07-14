@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Assignement-excersize</title>
   <style>
-    #container{
-      font-family: Verdana, Arial, sans-serif;
-    }
+
     img{
       display: block;
     }
@@ -14,25 +12,39 @@
       margin-top: 5px;
       margin-bottom: 5px;
     }
-    label{
-      font-weight: bold;
 
-    }
   </style>
 </head>
 <body>
+<?php
+if (!empty($_POST)){
+    echo "<h2>U bent succesvol ingelogd<h2><hr>";
+    echo "Naam: ".$_POST['username']."<br>" ;
+    echo "Wachtwoord: ".$_POST['password'] . "<br>";
+    echo "<a href=' ".$_SERVER["PHP_SELF"]."'>Opnieuw Inloggen</a>";
+
+}
+else{
+
+
+?>
+
+
 <h2>Log In</h2>
 <hr>
 <div id="container">
-  <form name="form1" action= "<?php echo$_SERVER["PHP_SELF"]?>">
+  <form name="form1" method="post" action= "<?php echo$_SERVER["PHP_SELF"]?>" >
   <img src="" alt="">
-  <label for="username">Username</label><br>
+  <label for="username"></label>Username<br>
   <input type="text" placeholder="Enter username here" id="username" name="username"><br>
-    <label for="password">Password</label><br>
-    <input type="password" placeholder="Enter password here" id="password"><br>
-      <input type="submit" name="Submit" value="Inloggen">
+      <label for="password"></label>Password<br>
+    <input type="password" placeholder="Enter password here" id="password" name="password"><br>
+      <input type="submit" value="Inloggen">
   </form>
 </div>
+<?php
+} ?>
 
 </body>
+
 </html>
